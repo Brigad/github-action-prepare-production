@@ -1,0 +1,31 @@
+{
+  "name": "@brigad/prepare-production",
+  "version": "1.0.0",
+  "description": "Prepare Brigad production",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm i && ncc build src/main.ts --minify --out lib",
+    "watch": "ncc build src/main.ts --watch --out lib",
+    "lint": "eslint ./src --ext ts && echo 'Lint complete.'",
+    "lint:fix": "eslint ./src --ext ts --fix && echo \"Lint & fix complete.\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grisha Ghukasyan <grishjan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^4.0.0",
+    "@octokit/webhooks": "^7.11.2",
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^12.12.14",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
+    "@zeit/ncc": "^0.22.1",
+    "eslint": "^6.8.0",
+    "typescript": "^3.7.3"
+  }
+}

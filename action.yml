@@ -1,0 +1,16 @@
+name: Production pull request preparation
+author: Grisha Ghukasyan
+description: Production pull request preparation
+
+runs:
+  using: node12
+  main: 'lib/index.js'
+
+branding: # Icons from https://feathericons.com/
+  icon: calendar
+  color: orange
+
+inputs:
+  githubToken:
+    description: 'Github internal token'
+    required: true
