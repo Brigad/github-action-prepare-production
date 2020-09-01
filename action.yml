@@ -9,8 +9,3 @@ runs:
 branding: # Icons from https://feathericons.com/
   icon: calendar
   color: orange
-
-inputs:
-  githubToken:
-    description: 'Github internal token'
-    required: true

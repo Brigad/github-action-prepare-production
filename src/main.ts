@@ -3,10 +3,17 @@ import * as github from '@actions/github';
 import moment from 'moment';
 import { getPRCommits } from './get-pr-commits';
 
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
+if (!GITHUB_TOKEN) {
+  throw new Error(
+    "GitHub's GraphQL API requires a token. Please pass a valid token (GITHUB_TOKEN) as an env variable, no scopes are required.",
+  );
+}
+
 async function run() {
   try {
-    const githubToken = core.getInput('githubToken');
-    const octokit = github.getOctokit(githubToken);
+    const octokit = github.getOctokit(GITHUB_TOKEN!);
 
     const commits = await getPRCommits(octokit, github.context.issue);
     await octokit.pulls.update({
