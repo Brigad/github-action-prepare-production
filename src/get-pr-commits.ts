@@ -58,7 +58,7 @@ export async function getPRCommits(
     return {
       name: commit.messageHeadline,
       url: commit.url,
-      author: commit.author.user.login,
+      author: commit.author.user?.login || 'unknown',
       pr: commit.associatedPullRequests.nodes.length
         ? {
             author: commit.associatedPullRequests.nodes[0].author.login,
