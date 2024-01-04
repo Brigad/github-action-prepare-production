@@ -28,7 +28,7 @@ async function run() {
       body: commits,
       ...(pull.data.title.includes('deploy(production)')
         ? {}
-        : { title: `deploy(production): ${moment().format(`YYYY-MM-DD`)}` }),
+        : { title: `deploy(production): ${moment().format(`YYYY-MM-DD HH:mm`)}` }),
     });
   } catch (err) {
     // setFailed logs the message and sets a failing exit code
