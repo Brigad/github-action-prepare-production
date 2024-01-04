@@ -1,5 +1,5 @@
-import * as core from '@actions/core';
-import * as github from '@actions/github';
+import core from '@actions/core';
+import github from '@actions/github';
 import moment from 'moment';
 import { getPRCommits } from './get-pr-commits';
 
@@ -16,12 +16,12 @@ async function run() {
     const octokit = github.getOctokit(GITHUB_TOKEN!);
 
     const commits = await getPRCommits(octokit, github.context.issue);
-    const pull = await octokit.pulls.get({
+    const pull = await octokit.rest.pulls.get({
       pull_number: github.context.issue.number,
       repo: github.context.issue.repo,
       owner: github.context.issue.owner,
     });
-    await octokit.pulls.update({
+    await octokit.rest.pulls.update({
       pull_number: github.context.issue.number,
       repo: github.context.issue.repo,
       owner: github.context.issue.owner,

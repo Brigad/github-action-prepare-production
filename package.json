@@ -13,19 +13,20 @@
   "author": "Grisha Ghukasyan <grishjan@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^4.0.0",
-    "@octokit/webhooks": "^7.11.2",
-    "lodash": "^4.17.20",
-    "moment": "^2.27.0"
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/webhooks": "^12.0.10",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.161",
-    "@types/node": "^12.12.14",
-    "@typescript-eslint/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/parser": "^2.13.0",
-    "@zeit/ncc": "^0.22.1",
-    "eslint": "^6.8.0",
-    "typescript": "^3.7.3"
-  }
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.0.2"
 }

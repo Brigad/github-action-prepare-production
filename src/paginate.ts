@@ -1,5 +1,5 @@
 import { get, has, set, update } from 'lodash';
-import * as github from '@actions/github';
+import github from '@actions/github';
 
 export async function paginate(
   client: ReturnType<typeof github.getOctokit>,
