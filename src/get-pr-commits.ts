@@ -1,4 +1,4 @@
-import github from '@actions/github';
+import * as github from '@actions/github';
 import { paginate } from './paginate';
 import { CommitsResult } from './commits.type';
 import { groupBy, keys, uniqBy } from 'lodash';
